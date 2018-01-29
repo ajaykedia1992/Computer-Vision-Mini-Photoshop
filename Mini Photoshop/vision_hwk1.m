@@ -190,7 +190,9 @@ while choice ~= 1
            final_image = famousMe(outImg, target_image, original_image);
            
            figure
-           imshow(final_image)
+           subplot(2,2,1), imagesc(original_image);
+           subplot(2,2,2), imagesc(target_image);
+           subplot(2,2,3), imagesc(final_image);
            
            imwrite(final_image, 'famous_me_result.jpg');
        %....
